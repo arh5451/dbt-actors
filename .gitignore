@@ -1,0 +1,5 @@
+requirements.txt
+target/
+dbt_packages/
+logs/
+.dbt-venv
