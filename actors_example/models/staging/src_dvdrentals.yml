@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dvdrental-postgres    # I think you can name this anything. 
+    database: dvdrental
+    schema: public
+    tables:
+      - name: actor
+      - name: city
