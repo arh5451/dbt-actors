@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: dvdrental-postgres  #Name we give the source in the DAG for dbt
+    database: dvdrental       #Name of the db in postgres
+    schema: public            #Add schema only if you want to use a source name that differs from the existing schema.
+    tables:
+      - name: actor
+      - name: address
+
+models:
+  - name: stg_actors
+    columns:
+      - name: actor_id
+        tests:
+          - unique
+          - not_null
