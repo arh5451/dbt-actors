@@ -31,8 +31,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   actors_example: # Projcet Name
     marts:
-      actors:
-        +materialized: table
+      +materialized: table
     staging:
       dvdrentals:
         +materialized: view
